@@ -24,12 +24,19 @@
   }
 
   function createRecord() {
-    records = [...records, selectedRecordData]
+    records = [
+      ...records,
+      {...selectedRecordData}
+    ]
   }
 
   function deleteRecord() {
     if (selectedRecordIndex !== -1) {
-      records = records.splice(selectedRecordIndex, 1)
+      // A spread syntax version would look a lot nicer, but Svelte compiler somehow had a bug at the time that this was
+      // implemented time. Also see: https://github.com/sveltejs/svelte/issues/7985
+      const recordsCopy = records.slice()
+      recordsCopy.splice(selectedRecordIndex, 1)
+      records = recordsCopy
     }
   }
 

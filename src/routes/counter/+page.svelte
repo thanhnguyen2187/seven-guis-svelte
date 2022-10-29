@@ -7,6 +7,6 @@
 </script>
 
 <div>
-  <input type="text" bind:value={count}/>
+  <input type="number" bind:value={count}/>
   <button on:click={increase}>Increase</button>
 </div>

@@ -46,13 +46,13 @@
 <div>
   <input
     type="number"
-    value={toCelsius(currentTemperature)}
+    value={+toCelsius(currentTemperature).toFixed(2)}
     on:input={setCurrentValueCelsius}
   />
   <span>Celsius</span> =
   <input
     type="number"
-    value={toFahrenheit(currentTemperature)}
+    value={+toFahrenheit(currentTemperature).toFixed(2)}
     on:input={setCurrentValueFahrenheit}
   />
   <span>Fahrenheit</span>
