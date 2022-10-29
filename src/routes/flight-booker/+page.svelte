@@ -1,7 +1,8 @@
 <script lang="ts">
-  let count = 0
   let firstDate = '02.01.2022'
-  let secondDate = '02.01.2022'
+  let secondDate = '04.01.2022'
+  type FlightOption = 'one-way-flight' | 'return-flight'
+  let flightOption: FlightOption = 'one-way-flight'
 
   function isDateValid(date: string): boolean {
     const parts = date.split('.')
@@ -35,9 +36,9 @@
 </script>
 
 <div>
-  <select>
-    <option>one-way flight</option>
-    <option>return flight</option>
+  <select bind:value={flightOption}>
+    <option value="one-way-flight">one-way flight</option>
+    <option value="return-flight">return flight</option>
   </select> <br/>
   <input
     type="text"
@@ -47,7 +48,12 @@
   <input
     type="text"
     bind:value={secondDate}
-    style:background-color={isDateValid(secondDate) ? '' : 'red'}
+    style:background-color={
+      (!isDateValid(secondDate) && flightOption === 'return-flight')
+      ? 'red'
+      : ''
+    }
+    disabled={flightOption === 'one-way-flight'}
   /> <br/>
-  <button>Book</button>
+  <button>Book</button> <br/>
 </div>
