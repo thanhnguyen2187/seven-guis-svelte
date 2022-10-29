@@ -1,38 +1,51 @@
-# create-svelte
+# 7GUIs With Svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Getting Started
 
-## Creating a project
+Make sure that you have `node` and `yarn` ready.
 
-If you're seeing this, you've probably already done this step. Congrats!
+```shell
+# to install dependencies
+yarn install
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+# to start running the project
+yarn dev
 
-# create a new project in my-app
-npm create svelte@latest my-app
+#   VITE v3.1.8  ready in 492 ms
+#
+#   ➜  Local:   http://127.0.0.1:5173/
+#   ➜  Network: use --host to expose
 ```
 
-## Developing
+Visit http://127.0.0.1:5173 to see the home page, and then go to the implemented tasks.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Samples
 
-```bash
-npm run dev
+### Counter
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+![](docs/static/counter.gif)
 
-## Building
+### Temperature Converter
 
-To create a production version of your app:
+![](docs/static/temperature-converter.gif)
 
-```bash
-npm run build
-```
+### Flight Booker
 
-You can preview the production build with `npm run preview`.
+![](docs/static/flight-booker.gif)
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+### Timer
+
+![](docs/static/timer.gif)
+
+### CRUD
+
+![](docs/static/crud.gif)
+
+### Circle Drawer
+
+![](docs/static/circle-drawer.gif)
+
+### Cells
+
+TBA
+
